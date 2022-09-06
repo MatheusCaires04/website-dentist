@@ -136,7 +136,7 @@ html::-webkit-scrollbar-track {
       }
     }
 
-    .ri-menu-line {
+    .menu__hamburguer {
       display: none;
     }
   }
@@ -343,6 +343,7 @@ main {
 @media (max-width: 768px) {
   html {
     font-size: 58%;
+    scroll-padding-top: 7rem;
   }
 
   .padding__g,
@@ -378,7 +379,7 @@ main {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       }
 
-      .ri-menu-line {
+      .menu__hamburguer {
         display: flex;
         font-size: 3rem;
         font-weight: 700;
