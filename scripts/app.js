@@ -10,8 +10,11 @@ document.querySelector(".menu__hamburguer").addEventListener("click", () => {
 const links = document.querySelectorAll(".flex__menu ul li a");
 for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("click", () => {
+    const iconMenu = document.querySelector(".menu__hamburguer");
     const menu = document.querySelector(".header .flex__menu ul");
     menu.classList.toggle("active");
+    iconMenu.classList.toggle("ri-close-line");
+    iconMenu.classList.toggle("ri-menu-line");
   });
 }
 
