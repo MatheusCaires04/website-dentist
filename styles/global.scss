@@ -1,0 +1,402 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-size: 63.5%;
+}
+
+html {
+  font-family: $font;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: $black;
+}
+
+.btn__g {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $light-bg;
+  background-color: $blue;
+  border: 0.3rem solid $blue;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+    border-color: $black;
+  }
+}
+
+.padding__header {
+  padding: 2rem 10%;
+}
+
+.padding__g {
+  padding: 4rem 10%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.container__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .box {
+    flex: 1 1 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+
+    strong {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+// header
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: $box-shadow;
+  z-index: 1000;
+
+  .flex__menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo,
+    span {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $light-color;
+    }
+
+    .logo span {
+      color: $blue;
+    }
+
+    ul {
+      display: inline-flex;
+      gap: 3rem;
+
+      li a {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $light-color;
+        transition: 0.2s;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
+    .ri-menu-line {
+      display: none;
+    }
+  }
+}
+
+.header.active {
+  background-color: $light-bg;
+}
+
+.container__header {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/home-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+
+  .description__header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50rem;
+
+    .title {
+      font-size: 5rem;
+      font-weight: 700;
+      text-align: start;
+      padding-bottom: 0;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .btn__g {
+      width: 50%;
+      min-width: 18rem;
+    }
+  }
+}
+
+main {
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: $white;
+
+    .image__left,
+    .description__about {
+      flex: 1 1 40rem;
+    }
+
+    .image__left {
+      padding: 2rem;
+    }
+
+    .description__about {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+
+      h3 {
+        font-size: 1.7rem;
+        color: $blue;
+      }
+
+      h1 {
+        font-size: 2.7rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .btn__g {
+        width: 50%;
+        min-width: 18rem;
+      }
+    }
+  }
+
+  .services {
+    background-color: $light-bg;
+
+    .container__box {
+      .box {
+        background-color: $white;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+
+  .process {
+    .container__box {
+      .box {
+        background-color: $blue;
+        box-shadow: $box-shadow;
+        color: $white;
+
+        img {
+          width: 25rem;
+        }
+
+        strong {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .comments__clients {
+    background-color: $light-bg;
+
+    .container__box {
+      .box {
+        background-color: $white;
+        box-shadow: $box-shadow;
+
+        img {
+          border-radius: 50%;
+          width: 15rem;
+        }
+
+        p {
+          margin: 2rem 0;
+        }
+
+        .stars {
+          display: flex;
+          gap: 1rem;
+          background-color: $light-bg;
+          padding: 1rem;
+
+          i {
+            font-size: 2.5rem;
+            color: $blue;
+          }
+        }
+
+        span {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 50rem;
+      gap: 2rem;
+      background-color: $light-bg;
+      box-shadow: $box-shadow;
+      padding: 2rem;
+
+      .form__group {
+        display: flex;
+        flex-direction: column;
+
+        label,
+        input {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $black;
+        }
+
+        input {
+          padding: 0.5rem 1rem;
+          border: 0.3rem solid $black;
+          border-radius: 0.6rem;
+          margin-top: 0.5rem;
+
+          &:focus {
+            border-color: $blue;
+          }
+        }
+      }
+
+      .btn__g {
+        width: 50%;
+        min-width: 20rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    .btn__g {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+
+  .padding__g,
+  .padding__header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .header {
+    .flex__menu {
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem !important;
+        transition: 0.3s linear;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        li a {
+          font-size: 2rem;
+        }
+      }
+
+      ul.active {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+
+      .ri-menu-line {
+        display: flex;
+        font-size: 3rem;
+        font-weight: 700;
+        color: $light-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  main {
+    .about {
+      gap: 0;
+    }
+
+    .contact {
+      form {
+        width: 100%;
+      }
+    }
+  }
+}

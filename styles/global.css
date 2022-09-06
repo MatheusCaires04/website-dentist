@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-size: 63.5%;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #00b8b8;
+  border-radius: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+.btn__g {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #eee;
+  background-color: #00b8b8;
+  border: 0.3rem solid #00b8b8;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn__g:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.padding__header {
+  padding: 2rem 10%;
+}
+
+.padding__g {
+  padding: 4rem 10%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.container__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.container__box .box {
+  flex: 1 1 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.container__box .box strong {
+  font-size: 1.8rem;
+}
+.container__box .box p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.header .flex__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .flex__menu .logo,
+.header .flex__menu span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #666;
+}
+.header .flex__menu .logo span {
+  color: #00b8b8;
+}
+.header .flex__menu ul {
+  display: inline-flex;
+  gap: 3rem;
+}
+.header .flex__menu ul li a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #666;
+  transition: 0.2s;
+}
+.header .flex__menu ul li a:hover {
+  color: #00b8b8;
+}
+.header .flex__menu .ri-menu-line {
+  display: none;
+}
+
+.header.active {
+  background-color: #eee;
+}
+
+.container__header {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/home-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+}
+.container__header .description__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50rem;
+}
+.container__header .description__header .title {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: start;
+  padding-bottom: 0;
+}
+.container__header .description__header p {
+  font-size: 1.5rem;
+}
+.container__header .description__header .btn__g {
+  width: 50%;
+  min-width: 18rem;
+}
+
+main .about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #fff;
+}
+main .about .image__left,
+main .about .description__about {
+  flex: 1 1 40rem;
+}
+main .about .image__left {
+  padding: 2rem;
+}
+main .about .description__about {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+main .about .description__about h3 {
+  font-size: 1.7rem;
+  color: #00b8b8;
+}
+main .about .description__about h1 {
+  font-size: 2.7rem;
+}
+main .about .description__about p {
+  font-size: 1.5rem;
+}
+main .about .description__about .btn__g {
+  width: 50%;
+  min-width: 18rem;
+}
+main .services {
+  background-color: #eee;
+}
+main .services .container__box .box {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+main .process .container__box .box {
+  background-color: #00b8b8;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+main .process .container__box .box img {
+  width: 25rem;
+}
+main .process .container__box .box strong {
+  margin-top: 1rem;
+}
+main .comments__clients {
+  background-color: #eee;
+}
+main .comments__clients .container__box .box {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+main .comments__clients .container__box .box img {
+  border-radius: 50%;
+  width: 15rem;
+}
+main .comments__clients .container__box .box p {
+  margin: 2rem 0;
+}
+main .comments__clients .container__box .box .stars {
+  display: flex;
+  gap: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+}
+main .comments__clients .container__box .box .stars i {
+  font-size: 2.5rem;
+  color: #00b8b8;
+}
+main .comments__clients .container__box .box span {
+  font-size: 1.3rem;
+}
+main .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .contact form {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  gap: 2rem;
+  background-color: #eee;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+main .contact form .form__group {
+  display: flex;
+  flex-direction: column;
+}
+main .contact form .form__group label,
+main .contact form .form__group input {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+main .contact form .form__group input {
+  padding: 0.5rem 1rem;
+  border: 0.3rem solid #333;
+  border-radius: 0.6rem;
+  margin-top: 0.5rem;
+}
+main .contact form .form__group input:focus {
+  border-color: #00b8b8;
+}
+main .contact form .btn__g {
+  width: 50%;
+  min-width: 20rem;
+}
+
+@media (max-width: 1024px) {
+  .header .btn__g {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+  .padding__g,
+.padding__header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .header .flex__menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem !important;
+    transition: 0.3s linear;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .flex__menu ul li a {
+    font-size: 2rem;
+  }
+  .header .flex__menu ul.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .flex__menu .ri-menu-line {
+    display: flex;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #666;
+    cursor: pointer;
+  }
+  main .about {
+    gap: 0;
+  }
+  main .contact form {
+    width: 100%;
+  }
+}/*# sourceMappingURL=global.css.map */
